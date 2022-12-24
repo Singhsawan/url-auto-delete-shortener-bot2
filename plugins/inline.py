@@ -26,7 +26,7 @@ async def answer(bot, query):
     if not await inline_users(query):
         await query.answer(results=[],
                            cache_time=0,
-                           switch_pm_text='okDa',
+                           switch_pm_text='Na_matum_tan_use_panuven',
                            switch_pm_parameter="hehe")
         return
 
