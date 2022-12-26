@@ -6,7 +6,7 @@ else
   echo "Cloning Custom Repo from $UPSTREAM_REPO "
   git clone $UPSTREAM_REPO /url-auto-delete-shortener-bot
 fi
-cd /Eva
+cd /url-auto-delete-shortener-bot
 pip3 install -U -r requirements.txt
 echo "Starting Bot...."
 python3 bot.py
