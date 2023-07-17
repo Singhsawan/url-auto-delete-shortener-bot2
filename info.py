@@ -14,7 +14,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '1923471'))
 API_HASH = environ.get('API_HASH', 'fcdc178451cd234e63faefd38895c991')
-BOT_TOKEN = environ.get('BOT_TOKEN', "5831288690:AAHpDYbbK2wieqnKFq6bKIeuCBBAKOilkSE")
+BOT_TOKEN = environ.get('BOT_TOKEN', "6380467959:AAGQPXtfOCumbGdYHGOD2XX4ewmAjhcqi3Y")
 
 #Port
 PORT = environ.get("PORT", "8080")
@@ -25,9 +25,9 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 PICS = (environ.get('PICS', 'https://telegra.ph/file/b806ad314d0c415571bde.jpg')).split()
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '880087645 1441767180').split( )]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', "-1001188070894 -100169224324").split( )]
-auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '880087645 1441767180').split( )]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5677019769 5651594253').split( )]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', "").split( )]
+auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split( )]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_channel = environ.get('AUTH_CHANNEL', '')
 auth_grp = environ.get('AUTH_GROUP')
@@ -35,13 +35,13 @@ AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_chan
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://asuvarisubot:asuvarisubot@cluster0.xdigslk.mongodb.net/?retryWrites=true&w=majority")
-DATABASE_NAME = environ.get('DATABASE_NAME', "asuvarisubot")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'asuvarisubot')
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://telegrammange:sawan09@cluster0.upfv2ff.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_NAME = environ.get('DATABASE_NAME', "sawn")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001188070894'))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'JAsuranserials')
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001876158428'))
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/+DvHQFu3Dgx5lOGE8')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 IMDB = is_enabled((environ.get('IMDB', "False")), True)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), False)
@@ -72,8 +72,8 @@ LOG_STR += f"Your current IMDB template is {IMDB_TEMPLATE}"
     
       # URL Shortener #
 
-URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', 'atglinks.com')
-URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', '8404b726a16f021cb55004cbeb99825182c29263')
+URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', '')
+URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', '')
 
      # Auto Delete For Group Message (Self Delete) #
 SELF_DELETE_SECONDS = int(environ.get('SELF_DELETE_SECONDS', 150))
